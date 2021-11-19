@@ -22,8 +22,6 @@ $URICount = $URI.Count - 1
 Write-Output "URI count is $URICount"
 Write-Output "Before loop, this loop is scheduled to run $max times."
 
-# So far, this while loop runs on a counter variable, we may be able to change this to state "while(true)" to ensure constant network activity.
-# Likely not a safe loop method without a try-catch statement, but I'm unsure as to what that could look like at this time.
 while($count -ne $max) {
 Write-Output "Loop started"
 $URISelected = Get-Random -Minimum 0 -Maximum $URICount
